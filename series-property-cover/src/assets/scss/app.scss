@@ -1,0 +1,62 @@
+@import './theme.scss';
+
+* {
+  padding: 0;
+  margin: 0;
+}
+.container {
+  width: 300px;
+  height: 400px;
+  margin: 100px auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  opacity: 0.8;
+  // 一次性填充theme里定义的所有属性
+  @include generate-series-property();
+  .content {
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: color 0.5s;
+
+    h2 {
+      font-size: 20px;
+      margin: 5px 0;
+      color: #edf7ff;
+    }
+
+    section {
+      width: 200px;
+      height: 36px;
+      line-height: 36px;
+      font-weight: 600;
+      margin-top: 30px;
+      text-align: center;
+      color: #fff;
+    }
+  }
+  .theme-list {
+    display: flex;
+    justify-content: space-around;
+    height: 100px;
+    .theme-item {
+      list-style: none;
+      width: 36px;
+      height: 36px;
+      border: 1px solid aliceblue;
+      cursor: pointer;
+    }
+    .blue {
+      background-color: $blue-theme-bg-color;
+    }
+    .red {
+      background-color: $red-theme-bg-color;
+    }
+    .yellow {
+      background-color: $yellow-theme-bg-color;
+    }
+  }
+}

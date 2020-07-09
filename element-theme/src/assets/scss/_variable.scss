@@ -1,0 +1,29 @@
+$blue-theme-bg-color: #20a0ff;
+$blue-theme-color: aliceblue;
+$blue-theme-font-family: '微软雅黑';
+
+$red-theme-bg-color: #ec7259;
+$red-theme-color: lightpink;
+$red-theme-font-family: '幼圆';
+
+$yellow-theme-bg-color: #fbd007;
+$yellow-theme-color: #f4f2f5;
+$yellow-theme-font-family: '楷体';
+
+$themes: (
+  blue: (
+    bg-color: $blue-theme-bg-color,
+    color: $blue-theme-color,
+    font-family: $blue-theme-font-family,
+  ),
+  red: (
+    bg-color: $red-theme-bg-color,
+    color: $red-theme-color,
+    font-family: $red-theme-font-family,
+  ),
+  yellow: (
+    bg-color: $yellow-theme-bg-color,
+    color: $yellow-theme-color,
+    font-family: $yellow-theme-font-family,
+  ),
+);

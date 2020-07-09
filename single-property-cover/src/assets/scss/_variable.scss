@@ -1,0 +1,35 @@
+$blue-theme-bg-color: #20a0ff;
+$blue-theme-bg-color-second: #0190fe;
+$blue-theme-color: aliceblue;
+$blue-theme-font-family: '微软雅黑';
+
+$red-theme-bg-color: #ec7259;
+$red-theme-bg-color-second: rgb(254, 77, 42);
+$red-theme-color: lightpink;
+$red-theme-font-family: '幼圆';
+
+$yellow-theme-bg-color: #fbd007;
+$yellow-theme-bg-color-second: rgb(233, 191, 1);
+$yellow-theme-color: #f4f2f5;
+$yellow-theme-font-family: '楷体';
+
+$themes: (
+  blue: (
+    bg-color: $blue-theme-bg-color,
+    bg-color-second: $blue-theme-bg-color-second,
+    color: $blue-theme-color,
+    font-family: $blue-theme-font-family,
+  ),
+  red: (
+    bg-color: $red-theme-bg-color,
+    bg-color-second: $red-theme-bg-color-second,
+    color: $red-theme-color,
+    font-family: $red-theme-font-family,
+  ),
+  yellow: (
+    bg-color: $yellow-theme-bg-color,
+    bg-color-second: $yellow-theme-bg-color-second,
+    color: $yellow-theme-color,
+    font-family: $yellow-theme-font-family,
+  ),
+);

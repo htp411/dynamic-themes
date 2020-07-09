@@ -1,0 +1,11 @@
+@import './variable';
+
+@mixin generate-series-property() {
+  @each $themename, $theme in $themes {
+    .theme-#{$themename} & {
+      background: map-get($map: $theme, $key: bg-color);
+      color: map-get($map: $theme, $key: color);
+      font-family: map-get($map: $theme, $key: font-family);
+    }
+  }
+}
