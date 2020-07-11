@@ -1,0 +1,65 @@
+@import './theme.less';
+
+* {
+  padding: 0;
+  margin: 0;
+}
+.container {
+  width: 300px;
+  height: 400px;
+  margin: 100px auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  opacity: 0.8;
+  // 插入自定义属性
+  .insert-theme-property(@theme-length, background-color, primary);
+  .insert-theme-property(@theme-length, color, text-color);
+  .insert-theme-property(@theme-length, font-family, font-family);
+
+  .content {
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: color 0.5s;
+    h2 {
+      font-size: 20px;
+      margin: 5px 0;
+      color: #edf7ff;
+    }
+    section {
+      width: 200px;
+      height: 36px;
+      line-height: 36px;
+      font-weight: 600;
+      margin-top: 30px;
+      text-align: center;
+      color: #fff;
+
+      .insert-theme-property(@theme-length, background-color, secondray);
+    }
+  }
+  .theme-list {
+    display: flex;
+    justify-content: space-around;
+    height: 100px;
+    .theme-item {
+      list-style: none;
+      width: 36px;
+      height: 36px;
+      border: 1px solid aliceblue;
+      cursor: pointer;
+    }
+    .blue {
+      background-color: @theme-blue-map[ @primary ];
+    }
+    .red {
+      background-color: @theme-red-map[ @primary ];
+    }
+    .yellow {
+      background-color: @theme-yellow-map[ @primary ];
+    }
+  }
+}

@@ -1,0 +1,30 @@
+@theme-name: blue, red, yellow;
+@theme-length: length(@theme-name);
+
+// less支持的类似于map的数据结构，通过map[key]取到value，可以减少不必要的递归遍历
+@theme-blue-map: {
+  @primary: #20a0ff;
+  @secondray: #0190fe;
+  @text-color: aliceblue;
+  @font-family: '微软雅黑';
+};
+
+@theme-red-map: {
+  @primary: #ec7259;
+  @secondray: #fe4d2a;
+  @text-color: lightpink;
+  @font-family: '幼圆';
+};
+
+@theme-yellow-map: {
+  @primary: #fbd007;
+  @secondray: #e9bf01;
+  @text-color: #f4f2f5;
+  @font-family: '楷体';
+};
+
+@theme-map: {
+  @blue: @theme-blue-map;
+  @red: @theme-red-map;
+  @yellow: @theme-yellow-map;
+};

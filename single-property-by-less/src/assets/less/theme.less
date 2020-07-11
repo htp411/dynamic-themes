@@ -1,0 +1,25 @@
+@import './variable.less';
+
+/**
+* 遍历主题个数，在每个主题下生成一条对应的属性
+* @theme-length: 主题的个数
+* @property: css属性名
+* @key: 主题中某个属性的key
+*
+*/
+.insert-theme-property(@theme-length, @property, @key)
+  when
+  (@theme-length > 0) {
+  // 用递归模拟遍历
+  .insert-theme-property((@theme-length - 1), @property, @key);
+
+  // extract(array, index) => 拿到array中位于index的值
+  @name: extract(@theme-name, @theme-length); // 拿到主题名称
+  @curr-theme-map: @theme-map[ @@name]; // @name拿到blue, @@name才能拿到@blue => @theme-map[@blue]拿到@theme-blue-map
+  @property-value: @curr-theme-map[ @@key];
+
+  // 设置一条css属性如：color: red
+  .theme-@{name} & {
+    @{property}: @property-value;
+  }
+}
